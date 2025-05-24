@@ -1,10 +1,10 @@
-const createWelcomeTemplates = (fullName, clientUrl) => {
+const createWelcomeTemplates = (firstName, lastName, clientUrl) => {
   return `<!DOCTYPE html>
       <html lang="en">
         <head>
           <meta charset="UTF-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <title>Welcome to Torii Gates</title>
+          <title>Query Received</title>
         </head>
         <body
           style="
@@ -37,7 +37,7 @@ const createWelcomeTemplates = (fullName, clientUrl) => {
               />
       
               <h1 style="color: white; margin: 0; font-size: 28px">
-                Welcome to Torii Gates
+                Congratulations Your Query/messaged has been received
               </h1>
             </div>
             <div
@@ -48,7 +48,7 @@ const createWelcomeTemplates = (fullName, clientUrl) => {
               "
             >
               <p style="font-size: 18px; color: #000">
-                <strong>Hello ${fullName},</strong>
+                <strong>Hello ${firstName} ${lastName},</strong>
               </p>
               <p>We're thrilled to have you join us!</p>
       
@@ -73,13 +73,11 @@ const createWelcomeTemplates = (fullName, clientUrl) => {
                 If you have any questions or need assistance, our support team is
                 always here to help.
               </p>
-              <p>Best regards,<br />Torii Gates</p>
+              <p>Best regards,<br />MegaMind Limited</p>
             </div>
           </main>
         </body>
       </html> `;
 };
 
-const createResetTemplate = () => {};
-
-module.exports = { createWelcomeTemplates, createResetTemplate };
+module.exports = { createWelcomeTemplates };

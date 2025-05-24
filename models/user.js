@@ -23,6 +23,13 @@ const userSchema = new Schema(
       ],
       lowercase: true,
     },
+
+    password: {
+      type: String,
+      minlength: [6, "Minimum password length is 6"],
+      required: [true, "Password is required"],
+    },
+
     query: {
       type: String,
       enum: ["General Query", "Support Request"],
