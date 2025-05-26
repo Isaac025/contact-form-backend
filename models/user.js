@@ -46,12 +46,12 @@ const userSchema = new Schema(
       type: Boolean,
       required: [true, "Please consent to being contacted"],
       default: false,
-      validate: {
-        validator: function (value) {
-          return value === true;
-        },
-        message: "You must accept the terms and conditions",
-      },
+      // validate: {
+      //   validator: function (value) {
+      //     return value === true;
+      //   },
+      //   message: "You must accept the terms and conditions",
+      // },
     },
 
     isVerified: {
